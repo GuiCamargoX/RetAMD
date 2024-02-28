@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="px-3 py-3 text-center">
+            <h1 class="display-4">About this project</h1>
+            <div class="my-2">
+                <img style="max-width: 600px; width: 100%;" src="{{ url_for('static', filename='img/flask+pytorch.png') }}" alt="">
+            </div>
+            <p class="lead">This project is aimed to auxiliar . <br> <a
+                    href="https://github.com/GuiCamargoX/amd-synthetic"> View on GitHub</a></p>
+            <p>
+                By default, this app uses Resnet18 image classifier. 
+                If you wish to contribute to the
+                project, please feel free to help us. More explanation as to how to contribute can be
+                dound in the GitHub repository link.
+            </p>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

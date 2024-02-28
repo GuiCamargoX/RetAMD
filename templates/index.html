@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+  <div class="col-sm-8 offset-sm-2">
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4"> Detection of Age-related Macular Degeneration (AMD)  </h1>
+      <p class="lead">The advances accomplished in the field of medicine provided the global population the opportunity to enjoy longer lives. Such a phenomenon is responsible for a growing number of elderly, directly impacting the increasing number of people suffering from age-related diseases. Among such conditions, one can refer to visual loss due to macular degeneration (AMD), which affected approximately 
+        200 million people worldwide by 2020, and the number is expected to rise to 288 million individuals until 2040. <br> </p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="mb-2 col-md-6 offset-md-3">
+    <form action="/infer" method="POST" enctype="multipart/form-data">
+      <div class="input-group">
+        <div class="custom-file">
+          <input type="file" name="file" accept=".jpg, .jpeg, .png" class="custom-file-input" id="inputGroupFile"
+            aria-describedby="inputGroupFileAddon04">
+          <label class="custom-file-label" for="inputGroupFile">Choose file</label>
+        </div>
+        <div class="input-group-append">
+          <input type="submit" value="Upload"  class="btn btn-outline-secondary" type="button"
+            id="inputGroupFileAddon04" /> 
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

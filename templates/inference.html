@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <p class="lead">File uploaded successfully. You have uploaded an image of</p>
+    <h1 class="display-4">{{name}}!</h1>
+    <p class="mt-5">Confidence: <strong>{{confidence}}%</strong></p>
+    <p class="mb-5">Image Input Quality Assessment: 
+      
+      {% if quality_input== 'Good' %} <span class="text-success text-uppercase font-weight-bold"> Good </span> {% endif %}
+      {% if quality_input== 'Usable' %} <span class="text-primary text-uppercase font-weight-bold"> Usable </span> {% endif %}
+      {% if quality_input== 'Bad' %} <span class="text-danger text-uppercase font-weight-bold"> Bad </span> {% endif %}
+      
+    </p>
+    <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md-auto">
+            <img src="{{ url_for('static', filename='uploads/prep_eye.jpg') }}" alt="User Image" width="224" height="224" class="img-thumbnail">
+          </div>
+          <div class="col-md-auto">
+            <img src="{{ url_for('static', filename='uploads/heat_eye.jpg') }}" alt="User Image" width="224" height="224" class="img-thumbnail">
+          </div>
+        </div>
+
+      </div>
+    <p class="mt-5"> <a href="/">Try again</a></p>
+</div>
+
+{% endblock %}
